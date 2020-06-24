@@ -6,7 +6,7 @@ new Vue({
     template: `
     <div>
         <header class="flex align center space-between app-header">
-            <h1>Miss Book</h1>
+            <h1>AppSus</h1>
             <nav>
                 <router-link to="/">Home</router-link> | 
                 <router-link to="/email">Email</router-link> | 
