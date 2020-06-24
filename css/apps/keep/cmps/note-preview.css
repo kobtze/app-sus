@@ -1,0 +1,31 @@
+@import './notes/note-img.css'
+
+.note-preview {
+    width: 150px;
+    height: 150px;
+    background-color: #dadada;
+    color: #424242;
+    border: 1px solid gray;
+    border-radius: 4px;
+    margin: 4px;
+}
+
+.note-preview h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+}
+
+.note-type {
+    font-weight: 700;
+}
+
+/* .note-preview .note-title {
+    margin-top: 6px;
+}
+
+.note-preview .note-author {
+    margin-bottom: 10px;
+}
+
+.note-preview .note-price {
+    margin-bottom: 20px;
+} */
