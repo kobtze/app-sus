@@ -1,10 +1,17 @@
-import appHeader from '../cmps/header.cmp.js'
+
 import footerApp from '../cmps/footer.cmp.js'
 import { emailService } from "../services/service.js";
+import emailFilter from "../cmps/email-filter.cmps.js";
+import emailList from "../cmps/email-list.cmp.js";
+
 export default {
   template: `
        <main class="all">
-       <app-header/>
+       <header class="main-header  ">
+      <img class="logo" src="./email-img/logo.png" alt=""/>
+      <email-filter @filter="setFilter"/>
+    <img class="hedar-button" src="./email-img/header-btn.png" alt=""/>
+    </header>
     <main class="main-container">
     <div class="side-container">
         <button class="compose">+ compose</button>
@@ -14,11 +21,7 @@ export default {
         <button class="side-bar-btn">➿ Draft</button>
     </div>
     <section class="mail-flow ">
-    <div v-for="email in emails" class="email-massage" @click="">
-    <span class="massage-left-span span-font">{{email.subject}}</span>
-    <span class="span-font">{{email.body}}</span>
-    <span class="massage-right-span span-font">{{email.sentAt}}</span>
-  </div>
+    <email-list :emails="emailsToShow"></email-list> 
     </section>
 </main>
 <footer-app/>
@@ -26,16 +29,36 @@ export default {
         `,
         data(){
           return {
-            emails:null
+            emails:[],
+            filterBy: null,
             }
         },
+        computed: {
+          emailsToShow() {
+              const filterBy = this.filterBy;
+              if (!filterBy) return this.emails;
+              var filteredEmails = this.emails.filter((email) => {
+                  if ((email.subject.toLowerCase().includes(filterBy.byName.toLowerCase()))||(email.body.toLowerCase().includes(filterBy.byName.toLowerCase()))) return email; 
+              });
+              return filteredEmails;
+          },
+      },
+
+        methods: {
+          setFilter(filterBy) {
+              this.filterBy = filterBy;
+              console.log('filter:',this.filterBy);
+              
+          },
+      },
   created() {
     console.log("email-app loaded");
     this.emails= emailService.getEmails()
   },
   components: {
-    appHeader,
     footerApp,
+    emailFilter,
+    emailList
 }
 };
 

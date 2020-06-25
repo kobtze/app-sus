@@ -38,6 +38,7 @@
     border: 1px rgba(255, 255, 255, 0.836) solid;
   }
   .filttered-emails {
+    text-align: center;
    outline: none;
    height: 30px;
    background-color: rgba(255, 255, 255, 0.425);
@@ -77,7 +78,7 @@
   }
   .mail-flow {
     display: grid;
-    background-color:rgba(211, 211, 211, 0.226);
+    /* background-color: darkgray; */
     flex-grow: 17;
     grid-template-rows: repeat(auto-fill, minmax(1fr, 1fr));
   }
@@ -105,7 +106,7 @@
    font-size: 1.5rem;
    text-align: center;
    outline: none;
-   margin-left: 5px;
+   margin-left: 10px;
    box-shadow: -1px -1px 4px 4px rgb(153, 151, 151);
    background-color: lightgray;
   }
@@ -135,6 +136,7 @@
     justify-content: space-between;
     align-items: center;
     border: 0.5px solid rgba(192, 190, 190, 0.767);
+    background-color: rgba(168, 186, 245, 0.438);
     border-right: none;
     border-left: none;
     height: 45px;
@@ -150,7 +152,7 @@
   .span-font{
     font-weight: 600;
   }
-    .mail-flow div:hover{
+    .mail-flow section:hover{
     cursor: pointer;
     transform: scale(1.0002);
     box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.48);
@@ -158,5 +160,5 @@
   }
   
   .DarkGraybackGroundColor{
-    background-color: darkgray;
+    background-color:white;
   }
