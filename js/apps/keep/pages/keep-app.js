@@ -1,28 +1,33 @@
 import {keepService} from '../services/keep.service.js';
-
-import noteList from '../cmps/note-list.js'
+import noteCreate from '../cmps/note-create.js';
+import noteList from '../cmps/note-list.js';
 
 export default {
     template: `
         <section class="keep-app">
             <h2>Keep App</h2>
+            <note-create />
             <note-list :notes="notes"/>
+            <!-- <note-text-full :note="currNote" v-show="isActivated" /> -->
         </section>
         `,
     data() {
         return {
-            notes: []
+            notes: [],
+            isActivated: true,
+            currNote: null
         }
     },
     created() {
         keepService.getNotes()
             .then(notes => {
                 this.notes = notes;
-                console.log(notes)
+                console.log('Notes:', notes)
             })
-        console.log('keep-app loaded')        
+        console.log('KeepApp loaded')        
     },
     components: {
         noteList,
+        noteCreate
     }
 }

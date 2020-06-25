@@ -1,3 +1,5 @@
-html {
-    text-align: center;
+body {
+    font-family: Roboto, arial, sans-serif;
+    color: #202124;
+    font-size: 15px;
 }

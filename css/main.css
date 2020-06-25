@@ -14,4 +14,5 @@
 
 @import './apps/keep/keep.css';
 @import './apps/keep/cmps/note-preview.css';
-@import 'apps/keep/cmps/notes/note-img.css'
+@import 'apps/keep/cmps/notes/note-img.css';
+@import './apps/keep/cmps/notes/note-txt-full.css';
