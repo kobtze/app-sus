@@ -2,29 +2,12 @@
 .note-preview {
     width: 240px;
     min-height: 122px;
-    background-color: #dadada;
-    color: #424242;
-    border: 1px solid gray;
+    border: 1px solid #e0e0e0;
     border-radius: 4px;
-    margin: 4px;
+    padding: 12px 16px;
+    margin: 6px;
 }
 
-.note-preview h1, h2, h3, h4, h5, h6, p {
-    margin-top: 0;
+.note-preview:hover {
+    cursor: pointer;
 }
-
-.note-type {
-    font-weight: 700;
-}
-
-/* .note-preview .note-title {
-    margin-top: 6px;
-}
-
-.note-preview .note-author {
-    margin-bottom: 10px;
-}
-
-.note-preview .note-price {
-    margin-bottom: 20px;
-} */
