@@ -7,7 +7,7 @@ export default {
     props: ['note'],
     template: `
         <li class="note-preview">
-        <component  is="noteImg" :note="note"></component>
+        <component  is="noteTxt" :note="note"></component>
         </li>
     `,
     components: {

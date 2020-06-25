@@ -1,8 +1,7 @@
-@import './notes/note-img.css'
 
 .note-preview {
-    width: 150px;
-    height: 150px;
+    width: 240px;
+    min-height: 122px;
     background-color: #dadada;
     color: #424242;
     border: 1px solid gray;
