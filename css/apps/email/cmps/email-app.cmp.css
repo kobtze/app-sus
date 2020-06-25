@@ -1,0 +1,162 @@
+
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+  }
+/*   
+  @font-face {
+    font-family: mont1;
+    src: url(./app-sus/font/Nunito/Nunito-Black.tttf);
+} */
+
+
+
+  .main-header {
+      display: flex;
+    height: 70px;
+    background-color: rgb(255, 169, 10, 0.815);
+    justify-content: space-between;
+   align-items: center;
+   flex-grow:2 ;
+  }
+  
+  :hover button{
+      cursor: pointer;
+  }
+  .logo {
+      padding: 10px;
+      font-size: 2rem;
+      font-weight: 400;
+  }
+  .serch {
+      width: 200px;
+    outline: none;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.425);
+    border: 1px rgba(255, 255, 255, 0.836) solid;
+  }
+  .filttered-emails {
+   outline: none;
+   height: 30px;
+   background-color: rgba(255, 255, 255, 0.425);
+   border: 1px rgba(255, 255, 255, 0.836) solid;
+  }
+  .hedar-button {
+  height: 20px;
+  width:  20px;
+  outline: none;
+  margin-right: 20px;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  margin-bottom: 3px;
+  }
+  
+  :hover .hedar-button{
+    cursor: pointer;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-grow:3 ;
+  }
+  
+  
+  
+  .side-container {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 593px;
+    background-color:rgba(211, 211, 211, 0.39);
+    flex-grow: 1;
+  
+  }
+  .mail-flow {
+    display: grid;
+    background-color:rgba(211, 211, 211, 0.226);
+    flex-grow: 17;
+    grid-template-rows: repeat(auto-fill, minmax(1fr, 1fr));
+  }
+  
+  .main-footer {
+    height: 30px;
+    background-color:lightgray;
+  }
+  
+  .side-bar-btn{
+  outline: none;
+  border: none;
+  background: none;
+  font-weight:bolder;
+  margin-top: 30px;
+  text-align: left;
+  font-style: oblique;
+  }
+  .compose{
+    border: none;
+   margin-top: 30px;
+   border-radius: 30px;
+   height: 50px;
+   width: 180px;
+   font-size: 1.5rem;
+   text-align: center;
+   outline: none;
+   margin-left: 5px;
+   box-shadow: -1px -1px 4px 4px rgb(153, 151, 151);
+   background-color: lightgray;
+  }
+
+  
+  
+  .inbox-btn{
+  font-style: oblique;
+  text-align: left;
+  height: 40px;
+  font-weight:bolder;
+  margin-top: 30px;
+  outline: none;
+  border: none;
+  background-color: rgba(255, 0, 0, 0.11);
+  border-top-right-radius: 20px 50%;
+  border-bottom-right-radius: 20px 50%;
+  }
+  
+  .all{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .email-massage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.5px solid rgba(192, 190, 190, 0.767);
+    border-right: none;
+    border-left: none;
+    height: 45px;
+  }
+
+  .massage-left-span{
+    margin-left: 20px;
+  }
+  .massage-right-span{
+    margin-right: 20px;
+  }
+
+  .span-font{
+    font-weight: 600;
+  }
+    .mail-flow div:hover{
+    cursor: pointer;
+    transform: scale(1.0002);
+    box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.48);
+    transition: .1s;
+  }
+  
+  .DarkGraybackGroundColor{
+    background-color: darkgray;
+  }
