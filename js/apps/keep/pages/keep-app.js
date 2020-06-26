@@ -5,7 +5,7 @@ import noteList from '../cmps/note-list.js';
 export default {
     template: `
         <section class="keep-app">
-            <h2>Keep App</h2>
+            <!-- <h2>Keep App</h2> -->
             <note-create :noteTypes="noteTypes" class="align-center"/>
             <note-list :notesToShow="notesToShow" :noteTypes="noteTypes"/>
         </section>

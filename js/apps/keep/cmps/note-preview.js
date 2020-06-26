@@ -2,8 +2,9 @@ import {eventBus} from '../services/eventbus-service.js';
 
 import noteTxt from './notes/note-txt.js';
 import noteImg from './notes/note-img.js';
+import noteVid from './notes/note-video.js';
+import noteAud from './notes/note-audio.js';
 import noteTodo from './notes/note-todo.js';
-// import noteVideo from './notes/note-video';
 
 export default {
     props: ['note', 'idx', 'noteTypes'],
@@ -16,8 +17,9 @@ export default {
     components: {
         'noteTxt': noteTxt,
         'noteImg': noteImg,
+        'noteVid': noteVid,
+        'noteAud': noteAud,
         'noteTodo': noteTodo,
-        // 'noteVideo': noteVideo
     },
     methods: {
         selectNote() {

@@ -14,6 +14,20 @@ export const keepService = {
 function _createNotes() {
   return [
     {
+      type: "noteVid",
+      info: {
+        url:
+          "https://www.youtube.com/watch?v=AYk4VTZIaIM&list=LL4i5XiY9eJuipv4_uMQUxPw&index=17&t=0s",
+      },
+    },
+    {
+      type: "noteVid",
+      info: {
+        url:
+          "https://www.youtube.com/watch?v=09n2945JW_0&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa&index=29%27",
+      },
+    },
+    {
       type: "noteImg",
       info: {
         url:
@@ -38,6 +52,13 @@ function _createNotes() {
       info: {
         url:
           "https://thevinylfactory.com/wp-content/uploads/2020/04/khruangbin-live.jpg",
+      },
+    },
+    {
+      type: "noteAud",
+      info: {
+        url:
+          "https://cld2099web.audiovideoweb.com/va90web25003/companions/Foundations%20of%20Rock/13.01.mp3",
       },
     },
     {
