@@ -6,7 +6,7 @@ import noteTodo from './notes/note-todo.js';
 // import noteVideo from './notes/note-video';
 
 export default {
-    props: ['note', 'idx'],
+    props: ['note', 'idx', 'noteTypes'],
     template: `
         <li class="note-preview" @click="selectNote">
         <component :is="componentType" :note="note" />
@@ -28,7 +28,7 @@ export default {
     },
     created() {
         this.componentType = this.note.type
-        // console.log('componentType:', this.componentType);
+        console.log('componentType:', this.componentType);
     },
     methods: {
         selectNote() {

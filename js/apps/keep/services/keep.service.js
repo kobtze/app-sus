@@ -7,7 +7,8 @@ export const keepService = {
   getNoteByIdx,
   saveNote,
   updateNote,
-  deleteNote
+  deleteNote,
+  getNoteTemplate,
 };
 
 function _createNotes() {
@@ -37,8 +38,8 @@ function _createNotes() {
       info: {
         txt: "Modal: hidden/show; pos: abs; z-index: 0;",
       },
-    }
-  ]
+    },
+  ];
 }
 
 function _createNotesOld() {
@@ -84,27 +85,36 @@ function getNotes() {
 }
 
 function getNoteByIdx(idx) {
-  return Promise.resolve(gNotes[idx])
+  return Promise.resolve(gNotes[idx]);
 }
 
-function saveNote(noteTxt) {
+function saveNote(type, noteTxt) {
   console.log("saving note...", noteTxt);
   const note = {
-    type: "noteTxt",
+    type: type,
     info: {
-      txt: noteTxt
-    }
+      txt: noteTxt,
+    },
   };
   gNotes.unshift(note);
-  console.log(gNotes);
+  console.log('Note saved', gNotes);
 }
 
 function updateNote(idx, noteTxt) {
   gNotes[idx].info.txt = noteTxt;
-  console.log("Service updating note...", idx, noteTxt)
+  console.log("Service updating note...", idx, noteTxt);
 }
 
 function deleteNote(idx) {
   gNotes.splice(idx, 1);
-  console.log('Service deleting note..', idx)
+  console.log("Service deleting note..", idx);
+}
+
+function getNoteTemplate() {
+  return {
+    type: "noteTxt",
+    info: {
+      txt: ''
+    }
+  };
 }

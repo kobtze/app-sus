@@ -4,12 +4,12 @@ import notePreview from './note-preview.js';
 import noteFull from './note-full.js';
 
 export default {
-    props: ['notes'],
+    props: ['noteTypes', 'notes'],
     template: `
     <section>
     <ul class="clean-list flex wrap flex-start note-list">
         <note-full v-if="isModalActive" :note="currNote"/>
-        <note-preview v-for="(note, idx) in notes" :note="note" :idx="idx" />      
+        <note-preview v-for="(note, idx) in notes" :note="note" :idx="idx" :noteTypes="noteTypes"/>      
     </ul>
     </section>
     `,
