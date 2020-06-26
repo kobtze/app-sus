@@ -4,6 +4,7 @@ var gNotes = _createNotes();
 
 export const keepService = {
   getNotes,
+  getNoteByIdx,
   saveNote,
 };
 
@@ -19,7 +20,7 @@ function _createNotes() {
       type: "noteTxt",
       info: {
         txt:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod beatae fuga doloribus quaerat mollitia omnis esse. Quisquam id voluptate officiis placeat dignissimos? Odit, qui assumenda sapiente in esse debitis nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod beatae fuga doloribus quaerat mollitia omnis esse. Quisquam id voluptate officiis placeat dignissimos? Odit, qui assumenda sapiente in esse debitis nostrum.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod beatae fuga doloribus quaerat mollitia omnis esse. Quisquam id voluptate officiis placeat dignissimos? Odit, qui assumenda sapiente in esse debitis nostrum.",
       },
     },
     {
@@ -78,6 +79,10 @@ function _createNotesOld() {
 
 function getNotes() {
   return Promise.resolve(gNotes);
+}
+
+function getNoteByIdx(idx) {
+  return Promise.resolve(gNotes[idx])
 }
 
 function saveNote(noteTxt) {

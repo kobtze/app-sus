@@ -1,4 +1,4 @@
-.k-note-txt-full {
+.k-note-full {
     width: 480px;
     min-height: 242px;
     background-color: #fff;
@@ -8,4 +8,10 @@
     position: absolute;
     margin: auto;
     z-index: 0;
+}
+
+.k-note-full-text-input {
+    width: 450px;
+    height: 216px;
+    border: none;
 }
