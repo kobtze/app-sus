@@ -6,6 +6,8 @@ export const keepService = {
   getNotes,
   getNoteByIdx,
   saveNote,
+  updateNote,
+  deleteNote
 };
 
 function _createNotes() {
@@ -97,4 +99,12 @@ function saveNote(noteTxt) {
   console.log(gNotes);
 }
 
-function updateNote(note) {}
+function updateNote(idx, noteTxt) {
+  gNotes[idx].info.txt = noteTxt;
+  console.log("Service updating note...", idx, noteTxt)
+}
+
+function deleteNote(idx) {
+  gNotes.splice(idx, 1);
+  console.log('Service deleting note..', idx)
+}
