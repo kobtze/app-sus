@@ -1,7 +1,9 @@
 export const emailService = {
     getEmails,
     getById,
-    updateMail
+    updateMail,
+    deleteEmail,
+    addEmail
 };
 
 
@@ -10,6 +12,28 @@ function updateMail(mailId){
  gEmails.forEach(mail=>{
    if(mail.id===mailId) mail.isRead=true;
  })
+}
+
+function createEmail(subject,body,emailContent){
+  return {
+    subject,
+    body,
+    isRead: false,
+    sentAt: '12:14 AM',
+    emailContent,
+    id:'15'
+  }
+    
+}
+
+function addEmail(subject,body,emailContent){
+ gEmails.push(createEmail(subject,body,emailContent));
+}
+
+function deleteEmail(emailID){
+  gEmails.forEach(function(email,index){
+  if(email.id===(emailID)) gEmails.splice(index,1)
+})
 }
 
 
