@@ -5,12 +5,12 @@ new Vue({
     router: myRouter,
     template: `
     <div>
-        <header class="flex align center space-between app-header">
-            <h1>AppSus</h1>
-            <nav>
-                <router-link to="/">Home</router-link> | 
-                <router-link to="/email">Email</router-link> | 
-                <router-link to="/keep">Keep</router-link> | 
+        <header class="flex app-header">
+            <button class="main-apps-btn" @click="showAppsModal">🔁</button>
+            <nav class="transfer-Apps flex space-between" v-show="showModal">
+                <router-link class="apps-btn" to="/">🏠</router-link>  
+                <router-link class="apps-btn" to="/email">📧</router-link>  
+                <router-link class="apps-btn" to="/keep">📝</router-link> 
             </nav>
         </header>
 
@@ -19,10 +19,17 @@ new Vue({
             <router-view/>
         </main>
 
-        <footer class="text-right">
-            coffeerights 2020    
-        </footer>  
-
     </div>
-    `
+    `,
+    data(){
+        return {
+          showModal:false
+          }
+      },
+      methods: {
+       
+        showAppsModal(){
+         this.showModal=!this.showModal
+        },
+    },
 })

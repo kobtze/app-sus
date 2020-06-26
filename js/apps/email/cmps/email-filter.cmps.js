@@ -3,9 +3,9 @@ export default {
         <section class="serch-and-filtterd">
             <input class="serch" type="text" placeholder="🔍 search mail" v-model="filterBy.byName" @input="filter"/>
             <select class="filttered-emails">
-                <option value="">All</option>
-                <option value="">Read</option>
-                <option value="">Unread</option>
+                <option @click="" value="">All</option>
+                <option @click="changeToRead" value="">Read</option>
+                <option @click="changeToUnRead" value="">Unread</option>
             </select>
         </section>
     `,
@@ -13,6 +13,8 @@ export default {
         return {
             filterBy: {
                 byName: '',
+                read:false,
+                unRead: false
             }
         }
     },
@@ -20,5 +22,12 @@ export default {
         filter() {
             this.$emit('filter', this.filterBy);
         },
+        changeToRead(){
+            this.read=true
+        },
+        changeToUnRead(){
+            this.unRead=true
+           
+        }
     }
 }
