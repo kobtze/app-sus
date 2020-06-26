@@ -4,8 +4,11 @@ import {keepService} from "../services/keep.service.js";
 export default {
     props: ["note"],
     template: `
-        <div class="k-note-full" @click="hide">
-        <textarea class="k-note-full-text-input" v-model="noteTxt" />
+        <div class="k-note-full">
+            <textarea class="k-note-full-text-input" @keyup.enter="save" v-model="noteTxt" />
+            <button class="k-note-full-save" @click="save">Save</button>
+            <button class="k-note-full-close" @click="hide">Close</button>
+            <button class="k-note-full-delete" @click="deleteNote">Delete</button>
         </div>
         `,
     data() {
@@ -24,6 +27,14 @@ export default {
     methods: {
         hide() {
             eventBus.$emit('closeModal')
+        },
+        save() {
+            keepService.updateNote(this.note, this.noteTxt);
+            this.hide()
+        },
+        deleteNote() {
+            keepService.deleteNote(this.note)
+            this.hide()
         }
     }
 }

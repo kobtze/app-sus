@@ -14,4 +14,5 @@
     width: 450px;
     height: 216px;
     border: none;
+    resize: none;
 }

@@ -6,7 +6,7 @@ export default {
     template: `
         <section class="keep-app">
             <h2>Keep App</h2>
-            <note-create />
+            <note-create class="align-center"/>
             <note-list :notes="notes"/>
             <!-- <note-text-full :note="currNote" v-show="isActivated" /> -->
         </section>
