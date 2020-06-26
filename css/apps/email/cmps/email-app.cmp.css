@@ -167,7 +167,11 @@ transition: .3s;
     background-color:white;
   }
 
-
+.no-btn-decoration{
+  background-color: unset;
+  border: none;
+  outline: none;
+}
 
   /* ******************* popUp new email window */
 .comp-container {

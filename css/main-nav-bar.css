@@ -20,12 +20,15 @@
   .apps-btn{
      text-decoration: none;
      font-size: 3rem;
+     width: 65px;
+     height: 65px;
   }
 
 
-.app-header>button:hover{
+.app-header>img:hover{
         transform: scale(1.2);
         transition: .3s;
+        cursor: pointer;
 }
   
 
