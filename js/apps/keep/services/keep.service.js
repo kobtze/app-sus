@@ -14,9 +14,30 @@ export const keepService = {
 function _createNotes() {
   return [
     {
+      type: "noteImg",
+      info: {
+        url:
+          "https://miro.medium.com/max/500/1*E0JKFZnFnxjDeB0H-nS_og.jpeg",
+      },
+    },
+    {
       type: "noteTxt",
       info: {
         txt: "(Puki !== Muki) however both are truthy variables.",
+      },
+    },
+    {
+      type: "noteImg",
+      info: {
+        url:
+          "https://statics.lesinrocks.com/content/thumbs/uploads/2020/06/26/1456436/width-1200-height-630-watermark-2/khruangbin-web-width_1982_height_1079_x_14_y_7.jpg",
+      },
+    },
+    {
+      type: "noteImg",
+      info: {
+        url:
+          "https://thevinylfactory.com/wp-content/uploads/2020/04/khruangbin-live.jpg",
       },
     },
     {
@@ -27,16 +48,23 @@ function _createNotes() {
       },
     },
     {
-      type: "noteTxt",
+      type: "noteImg",
       info: {
-        txt:
-          "Key Points to Remember: 1. Use a silver or white reflector of a decent enough size to cover a half body shot. A 80cm/32in size is a good place to start. 2. Cut a hole in the center of your reflector large enough to take the diameter of your largest lens. 3. Don't cut a hole in your carpet. 4. The bounced light of your reflector is your key light. To adjust the exposure of this light you will have to move the reflector closer and further away until you're happy. 5. Use an Neutral Density filter on your lens to reduce any unwanted power from your strobe and shoot as wide open as your lens will allow.",
+        url:
+          "https://yesno.wtf/assets/yes/2-5df1b403f2654fa77559af1bf2332d7a.gif",
       },
     },
     {
       type: "noteTxt",
       info: {
         txt: "Modal: hidden/show; pos: abs; z-index: 0;",
+      },
+    },
+    {
+      type: "noteImg",
+      info: {
+        url:
+          "https://lh3.googleusercontent.com/proxy/FGhrukzHCwv7u4B1E6rR3eWFEDLUWEmxjavi50sz6fI08sMwSi1zURY7cV5dFdGLyEXun2cqRqbNX0BaZcTZvMomVkmPvu8fKA",
       },
     },
   ];
@@ -89,15 +117,32 @@ function getNoteByIdx(idx) {
 }
 
 function saveNote(type, noteTxt) {
-  console.log("saving note...", noteTxt);
-  const note = {
-    type: type,
-    info: {
-      txt: noteTxt,
-    },
-  };
+  console.log('type:', type, 'noteTxt:', noteTxt);
+  if (!noteTxt) Promise.reject();
+
+  var note = { type: type, info: {} };
+  
+  switch (type) {
+    case 'noteTxt':
+      note.info.txt = noteTxt;
+      break;
+    case 'noteImg':
+    case 'noteVid':
+    case 'noteAud':
+      note.info.url = noteTxt;
+      break;
+
+    case 'noteTodo':
+      let listArr = noteTxt.split(',');
+      note.info.list = listArr.map(item => {
+				return { txt: item, completed: false };
+			});
+			break;
+  }
+
   gNotes.unshift(note);
-  console.log('Note saved', gNotes);
+  // console.log("note manipulated:", note);
+  console.log('gNotes:', gNotes);
 }
 
 function updateNote(idx, noteTxt) {

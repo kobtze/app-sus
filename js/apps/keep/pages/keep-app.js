@@ -7,12 +7,12 @@ export default {
         <section class="keep-app">
             <h2>Keep App</h2>
             <note-create :noteTypes="noteTypes" class="align-center"/>
-            <note-list :noteTypes="noteTypes" :notes="notes"/>
+            <note-list :notesToShow="notesToShow" :noteTypes="noteTypes"/>
         </section>
         `,
     data() {
         return {
-            notes: [],
+            notesToShow: [],
             isActivated: true,
             currNote: null,
             noteTypes: {
@@ -27,8 +27,8 @@ export default {
     created() {
         keepService.getNotes()
             .then(notes => {
-                this.notes = notes;
-                console.log('KeepApp loaded, Got initial notes:', notes)
+                this.notesToShow = notes;
+                console.log('Notes to show:', notes)
             })
     },
     components: {

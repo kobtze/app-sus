@@ -9,26 +9,15 @@ export default {
     props: ['note', 'idx', 'noteTypes'],
     template: `
         <li class="note-preview" @click="selectNote">
-        <component :is="componentType" :note="note" />
+        <component  :is="note.type"
+                    :note="note" />
         </li>
     `,
-    data() {
-        return {
-            componentType: null
-        }
-    },
     components: {
         'noteTxt': noteTxt,
         'noteImg': noteImg,
         'noteTodo': noteTodo,
         // 'noteVideo': noteVideo
-    },
-    computed: {
-        
-    },
-    created() {
-        this.componentType = this.note.type
-        console.log('componentType:', this.componentType);
     },
     methods: {
         selectNote() {
