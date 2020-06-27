@@ -1,4 +1,4 @@
-.transfer-Apps{
+.transfer-Apps {
    border-radius: 10px;
    width: 162px;
    height: 55px;
@@ -12,7 +12,7 @@
    z-index: 4003;
 }
 
-.main-apps-btn{
+.main-apps-btn {
    background-color: unset;
    border: none;
    outline: none;
@@ -23,7 +23,7 @@
    margin-right: 13px;
 }
 
-.apps-btn{
+.apps-btn {
    text-decoration: none;
    font-size: 2rem;
    /* width: 65px; */
@@ -31,12 +31,12 @@
    padding: 12px 10px;
    color: rgb(194, 183, 183);
 }
-.apps-btn:hover{
+
+.apps-btn:hover {
    color: rgb(73, 65, 65);
 }
 
-
-.app-header>img:hover{
+.app-header>img:hover {
    transform: scale(1.2);
    transition: .3s;
    cursor: pointer;
