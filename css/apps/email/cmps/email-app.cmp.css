@@ -333,3 +333,26 @@ outline: none;
    }
 
 }
+
+@media (max-width: 400px) {
+  .comp-container {
+     width: 200px;
+     height: 200px;
+   }
+   .serch {
+      width: 100px;
+
+   }
+
+   .compose{
+     width: 80px;
+     height: 30px;
+     font-size: 0.6rem;
+   }
+
+   .massage-body{
+    font-size: 0px;
+   width:  50px;
+   }
+
+}
