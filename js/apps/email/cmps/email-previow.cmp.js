@@ -4,7 +4,7 @@ export default {
   template: `
             <section class="email-massage" @mouseover="showIconsOnMessage" >
             <button class="no-btn-decoration" v-show="showIcons" @click.stop="deleteEmail" >🗑️</button>
-            <button class="no-btn-decoration" v-show="showIcons" @click.stop="" >⭐</button>
+            <button class="no-btn-decoration" v-show="showIcons" @click.stop="addStar" >{{star}}</button>
             <span class="massage-left-span span-font">{{email.subject}}</span>
             <span class="massage-body span-font">{{email.body}}</span>
             <span class="massage-right-span span-font">{{email.sentAt}}</span>
@@ -12,7 +12,8 @@ export default {
         `,
         data(){
           return{
-            showIcons:true
+            showIcons:true,
+            star:'⭐'
           }
         },
         
@@ -20,6 +21,10 @@ export default {
     deleteEmail() {
       emailService.deleteEmail(this.email.id)
         },
+        addStar() {
+          this.star='🌟'
+          emailService.addStar(this.email.id)
+            },
 
         isInbox(emailStatus){
           if(this.email.kindOf===emailStatus) return true

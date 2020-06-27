@@ -10,8 +10,8 @@ export default {
       <input class="subject" type="text" placeholder="  subject" v-model="subject" />
       <textarea class="main-text" v-model="emailContent"></textarea>
       <footer class="comp-footer">
-        <button  @click="addNewEmail();showMassegeModal()" class="send">Send</button>
-        <img @click="showMassegeModal" class="delete" src="../email-img/trash.PNG" alt="">
+        <button  @click.stop="addNewEmail" class="send">Send</button>
+        <img @click.stop="showMassegeModal" class="delete" src="../email-img/trash.PNG" alt="">
       </footer>
 </form>
     `,
@@ -28,6 +28,7 @@ export default {
        this.showModal=!this.showModal
       },
         addNewEmail(){
+          this.showMassegeModal()
           emailService.addEmail(this.subject,this.body,this.emailContent)
         }
     }
