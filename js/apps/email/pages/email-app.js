@@ -11,7 +11,9 @@ export default {
        <header class="main-header">
       <img class="logo" src="./email-img/logo.png" alt=""/>
       <email-filter @filter="setFilter"/>
-    <img class="hedar-button" src="./email-img/header-btn.png" alt=""/>
+      <!-- <i class="fas fa-th cursor-pointer hedar-button" ></i> -->
+      <span class="hedar-button"></span>
+    <!-- <img class="hedar-button" src="./email-img/header-btn.png" alt=""/> -->
     </header>
     <main class="main-container">
     <div class="side-container">

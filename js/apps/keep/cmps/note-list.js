@@ -4,12 +4,15 @@ import notePreview from './note-preview.js';
 import noteFull from './note-full.js';
 
 export default {
-    props: ['noteTypes', 'notes'],
+    props: ['notesToShow', 'noteTypes'],
     template: `
     <section>
     <ul class="clean-list flex wrap flex-start note-list">
         <note-full v-if="isModalActive" :note="currNote"/>
-        <note-preview v-for="(note, idx) in notes" :note="note" :idx="idx" :noteTypes="noteTypes"/>      
+        <note-preview   v-for="(note, idx) in notesToShow"
+                        :note="note"
+                        :idx="idx"
+                        :noteTypes="noteTypes"/>
     </ul>
     </section>
     `,
@@ -28,11 +31,6 @@ export default {
             this.isModalActive = true;
             this.currNote = idx;
             console.log('Note selected:',this.currNote, this.notes[this.currNote]);
-            // setTimeout(() => {
-            //     this.isModalActive = false;
-            //     this.currNote = null;
-            //     console.log('Timeout! currNote:', this.currNote, this.notes[this.currNote])
-            // }, 10000);
         });
         eventBus.$on('closeModal', () => {
             this.isModalActive = false;

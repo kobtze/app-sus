@@ -35,4 +35,8 @@
         cursor: pointer;
 }
   
-
+.appsus-button {
+   font-size: 1.8em;
+   color: #ccc;
+   padding: 20px;
+}

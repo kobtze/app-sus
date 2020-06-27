@@ -7,15 +7,15 @@ export default {
         <section class="keep-app">
         <header class="main-header">
       <img class="logo" src="./email-img/logo.png" alt=""/>
-    <img class="hedar-button" src="./email-img/header-btn.png" alt=""/>
+      <span class="hedar-button"></span>
     </header>
             <note-create :noteTypes="noteTypes" class="align-center"/>
-            <note-list :noteTypes="noteTypes" :notes="notes"/>
+            <note-list :notesToShow="notesToShow" :noteTypes="noteTypes"/>
         </section>
         `,
     data() {
         return {
-            notes: [],
+            notesToShow: [],
             isActivated: true,
             currNote: null,
             noteTypes: {
@@ -30,8 +30,8 @@ export default {
     created() {
         keepService.getNotes()
             .then(notes => {
-                this.notes = notes;
-                console.log('KeepApp loaded, Got initial notes:', notes)
+                this.notesToShow = notes;
+                console.log('Notes to show:', notes)
             })
     },
     components: {
