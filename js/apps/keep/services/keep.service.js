@@ -11,8 +11,30 @@ export const keepService = {
   getNoteTemplate,
 };
 
+"'Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.' ― Albert Einstein"
+
+// 
+// 
+// https://yesno.wtf/assets/yes/0-c44a7789d54cbdcad867fb7845ff03ae.gif
+// 
+// 
+
+
+
 function _createNotes() {
   return [
+    {
+      type: "noteImg",
+      info: {
+        url: "https://yesno.wtf/assets/yes/14-b57c6dc03aa15a4b18f53eb50d6197ee.gif",
+      },
+    },
+    {
+      type: "noteTxt",
+      info: {
+        txt: "Definition, Algorithm: Word used by programmers when they do not want to explain what they did.",
+      },
+    },
     {
       type: "noteVid",
       info: {
@@ -21,10 +43,63 @@ function _createNotes() {
       },
     },
     {
+      type: "noteImg",
+      info: {
+        url:
+          "https://i.pinimg.com/originals/2b/d2/51/2bd251c6a89a149c6d96774957651d91.jpg",
+      },
+    },
+    {
+      type: "noteAud",
+      info: {
+        url: "https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_1MG.mp3",
+      },
+    },
+    {
+      type: "noteImg",
+      info: {
+        url:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Adams_The_Tetons_and_the_Snake_River.jpg/390px-Adams_The_Tetons_and_the_Snake_River.jpg",
+      },
+    },
+    {
+      type: "noteTodo",
+      info: {
+        list: [{ txt: 'Lip Balm', completed: false }, { txt: 'Toothbrush', completed: false }, { txt: 'Sunscreen', completed: false }, { txt: 'Shampoo', completed: false }, { txt: 'Nail Clippers', completed: false }, { txt: 'Birth Control', completed: false }, { txt: 'Laundry Bag', completed: false }, { txt: 'Shaving Supplies', completed: false }],
+      },
+    },
+    {
+      type: "noteImg",
+      info: {
+        url:
+          "https://yesno.wtf/assets/yes/13-c3082a998e7758be8e582276f35d1336.gif",
+      },
+    },
+    {
       type: "noteVid",
       info: {
         url:
-          "https://www.youtube.com/watch?v=09n2945JW_0&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa&index=29%27",
+          "https://www.youtube.com/watch?v=iOBXuCYB4jQ",
+      },
+    },
+    {
+      type: "noteTxt",
+      info: {
+        txt: "'Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.' ― Albert Einstein",
+      },
+    },
+    {
+      type: "noteVid",
+      info: {
+        url:
+          "https://www.youtube.com/watch?v=Fpeqhs1JRv0",
+      },
+    },
+    {
+      type: "noteVid",
+      info: {
+        url:
+          "https://www.youtube.com/watch?v=RPJnukaw-3Q",
       },
     },
     {
@@ -37,20 +112,14 @@ function _createNotes() {
     {
       type: "noteTodo",
       info: {
-        list: [{ txt: 'code', completed: false }, { txt: 'refactor', completed: false }, { txt: 'tractor', completed: false }],
-      },
-    },
-    {
-      type: "noteTxt",
-      info: {
-        txt: "(Puki !== Muki) however both are truthy variables.",
+        list: [{ txt: 'eat', completed: false }, { txt: 'code', completed: false }, { txt: 'sleep', completed: false }],
       },
     },
     {
       type: "noteImg",
       info: {
         url:
-          "https://statics.lesinrocks.com/content/thumbs/uploads/2020/06/26/1456436/width-1200-height-630-watermark-2/khruangbin-web-width_1982_height_1079_x_14_y_7.jpg",
+          "https://media-cdn.tripadvisor.com/media/photo-s/12/b6/65/39/it-is-better-to-see-something.jpg",
       },
     },
     {
@@ -71,7 +140,7 @@ function _createNotes() {
       type: "noteTxt",
       info: {
         txt:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod beatae fuga doloribus quaerat mollitia omnis esse. Quisquam id voluptate officiis placeat dignissimos? Odit, qui assumenda sapiente in esse debitis nostrum.",
+          "QA Engineer walks into a bar. Orders a beer. Orders 0 beers. Orders 999999999 beers. Orders a lizard. Orders -1 beers. Orders a sfdeljknesv.",
       },
     },
     {
@@ -79,19 +148,6 @@ function _createNotes() {
       info: {
         url:
           "https://yesno.wtf/assets/yes/2-5df1b403f2654fa77559af1bf2332d7a.gif",
-      },
-    },
-    {
-      type: "noteTxt",
-      info: {
-        txt: "Modal: hidden/show; pos: abs; z-index: 0;",
-      },
-    },
-    {
-      type: "noteImg",
-      info: {
-        url:
-          "https://media-cdn.tripadvisor.com/media/photo-s/12/b6/65/39/it-is-better-to-see-something.jpg",
       },
     },
   ];
