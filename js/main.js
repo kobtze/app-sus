@@ -8,10 +8,10 @@ new Vue({
         <header class="flex app-header">
         <i class="fas fa-th cursor-pointer main-apps-btn" @click="showAppsModal" ></i>
             <!-- <img class="main-apps-btn" @click="showAppsModal" src="../email-img/header-btn.PNG" alt=""/> -->
-            <nav class="transfer-Apps flex space-between" v-show="showModal">
-                <router-link class="apps-btn" to="/">🏠</router-link>  
-                <router-link class="apps-btn" to="/email">📧</router-link>  
-                <router-link class="apps-btn" to="/keep">📝</router-link> 
+            <nav class="transfer-Apps flex space-between" v-show="showModal" @click="showAppsModal" >
+                <router-link class="apps-btn" to="/"><i class="fas fa-home"></i></router-link>  
+                <router-link class="apps-btn" to="/email"><i class="far fa-envelope"></i></router-link>  
+                <router-link class="apps-btn" to="/keep"><i class="far fa-sticky-note"></i></router-link> 
             </nav>
         </header>
 

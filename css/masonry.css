@@ -1,0 +1,35 @@
+.masonry {
+	margin: 0 auto 2em;
+	column-gap: 1.5em;
+}
+
+.masonry-note-item {
+-webkit-column-break-inside: avoid; /* Chrome, Safari */
+page-break-inside: avoid;           /* Theoretically FF 20+ */
+break-inside: avoid-column;         /* IE 11 */
+}
+
+
+@media only screen and (min-width: 1400px) {
+	.masonry {
+		column-count: 5;
+	}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1399px) {
+	.masonry {
+		column-count: 4;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.masonry {
+		column-count: 3;
+	}
+}
+
+@media only screen and (min-width: 540px) and (max-width: 767px) {
+	.masonry {
+		column-count: 2;
+	}
+}
