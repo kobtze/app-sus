@@ -1,31 +1,24 @@
 export default {
   props: ["note"],
   template: `
-      <div class="text-center note-txt">
-          {{note.info.label}}
+    <div class="note-todos">
       <ul>
-          <li class="clean-list" v-for="(todo, idx) in todosToShow">
-              {{idx}}
-            {{todo.doneAt}}
-            {{todo.txt}}
+          <li v-for="(todo, idx) in note.info.list"
+              class="clean-list"
+              :class="statusClass(todo.completed)"
+              @click.stop="updateStatus(idx)">
+              {{todo.txt}}
           </li>
       </ul>
-      <!-- <pre>{{todosToShow}}</pre> -->
-      </div>
-      `,
-  data() {
-    return {
-    //   todosToShow: [],
-    };
-  },
-  created() {
-    // console.log("To-dos:", todosToShow);
-  },
-  computed: {
-    todosToShow() {
-    //   const notes = this.note.info.todos;
-      var todoList = this.note.info.todos.map((todo) => todo)
-      return todoList
+    </div>
+  `,
+  methods: {
+    statusClass(status) {
+      return status ? "completed" : "";
+    },
+    updateStatus(listIdx) {
+      console.log("change status");
+      // eventBus.$emit(EVENT_LIST_NOTE_STATUS_CHANGED, this.note.id, listIdx);
     },
   },
 };

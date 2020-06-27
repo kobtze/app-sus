@@ -1,4 +1,6 @@
 import {keepService} from '../services/keep.service.js';
+import {eventBus} from '../services/eventbus-service.js';
+
 import noteCreate from '../cmps/note-create.js';
 import noteList from '../cmps/note-list.js';
 
@@ -9,12 +11,14 @@ export default {
       <img class="logo" src="./email-img/logo.png" alt=""/>
       <span class="hedar-button"></span>
     </header>
+            <div v-if="editMode" class="k-screen"></div>
             <note-create :noteTypes="noteTypes" class="align-center"/>
             <note-list :notesToShow="notesToShow" :noteTypes="noteTypes"/>
         </section>
         `,
     data() {
         return {
+            editMode: false,
             notesToShow: [],
             isActivated: true,
             currNote: null,
@@ -33,6 +37,14 @@ export default {
                 this.notesToShow = notes;
                 console.log('Notes to show:', notes)
             })
+        eventBus.$on('dimScreen', () => {
+            console.log('screenDimmed');
+            this.editMode = true
+        })
+        eventBus.$on('restoreScreen', () =>{
+            console.log('screenRestored');
+            this.editMode = false
+        })
     },
     components: {
         noteList,

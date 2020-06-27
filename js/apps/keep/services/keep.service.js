@@ -35,6 +35,12 @@ function _createNotes() {
       },
     },
     {
+      type: "noteTodo",
+      info: {
+        list: [{ txt: 'code', completed: false }, { txt: 'refactor', completed: false }, { txt: 'tractor', completed: false }],
+      },
+    },
+    {
       type: "noteTxt",
       info: {
         txt: "(Puki !== Muki) however both are truthy variables.",
@@ -85,7 +91,7 @@ function _createNotes() {
       type: "noteImg",
       info: {
         url:
-          "https://lh3.googleusercontent.com/proxy/FGhrukzHCwv7u4B1E6rR3eWFEDLUWEmxjavi50sz6fI08sMwSi1zURY7cV5dFdGLyEXun2cqRqbNX0BaZcTZvMomVkmPvu8fKA",
+          "https://media-cdn.tripadvisor.com/media/photo-s/12/b6/65/39/it-is-better-to-see-something.jpg",
       },
     },
   ];
@@ -163,17 +169,18 @@ function saveNote(type, noteTxt) {
 
   gNotes.unshift(note);
   // console.log("note manipulated:", note);
-  console.log('gNotes:', gNotes);
+  // console.log('gNotes:', gNotes);
 }
 
 function updateNote(idx, noteTxt) {
   gNotes[idx].info.txt = noteTxt;
-  console.log("Service updating note...", idx, noteTxt);
+  // console.log("Service updating note...", idx, noteTxt);
+  // console.log('gNotes:', gNotes);
 }
 
 function deleteNote(idx) {
   gNotes.splice(idx, 1);
-  console.log("Service deleting note..", idx);
+  // console.log("Service deleting note..", idx);
 }
 
 function getNoteTemplate() {

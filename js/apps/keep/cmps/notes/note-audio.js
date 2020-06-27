@@ -8,6 +8,6 @@ export default {
     </div>
     `,
     created() {
-        console.log('note-aud');
+        // console.log('note-aud');
     }
 }

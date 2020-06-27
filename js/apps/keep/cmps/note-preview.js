@@ -25,6 +25,7 @@ export default {
         selectNote() {
             // console.log('Note selected:', this.idx, this.note);
             eventBus.$emit('noteSelected', this.idx);
+            eventBus.$emit('dimScreen', this.idx);
         }
     }
 }

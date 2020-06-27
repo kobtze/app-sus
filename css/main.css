@@ -1,7 +1,8 @@
+@import './reset.css';
 @import './helpers.css';
 @import './base.css';
 @import './main-nav-bar.css';
-
+@import './masonry.css';
 
 /* BOOKS */
 

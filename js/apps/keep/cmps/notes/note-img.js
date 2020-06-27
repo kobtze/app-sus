@@ -6,6 +6,6 @@ export default {
     </div>
     `,
     created() {
-        console.log('note-img');
+        // console.log('note-img');
     }
 }

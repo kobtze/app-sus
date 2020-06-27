@@ -6,8 +6,7 @@ export default {
     </div>
     `,
     created() {
-        console.log('note-vid');
-        console.log(this.note);
+        // console.log('note-vid');
     },
     computed: {
         youTubeId() {
