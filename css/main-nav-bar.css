@@ -9,36 +9,37 @@
    transition: .3s;
    right: 63px;
    top: 63px;
-   z-index: 1000;
-  }
-  .main-apps-btn{
-     background-color: unset;
-      border: none;
-      outline: none;
-      font-size: 2rem;
-      position: absolute;
-      right: 2px;
-      top:20px;
-      margin-right: 13px;
-  }
+   z-index: 4003;
+}
 
-  .apps-btn{
-     text-decoration: none;
-     font-size: 2rem;
-     /* width: 65px; */
-     /* height: 65px; */
-     padding: 12px 10px;
-     color: rgb(194, 183, 183);
-  }
-  .apps-btn:hover{
-     color: rgb(73, 65, 65);
-  }
+.main-apps-btn{
+   background-color: unset;
+   border: none;
+   outline: none;
+   font-size: 2rem;
+   position: absolute;
+   right: 2px;
+   top:20px;
+   margin-right: 13px;
+}
+
+.apps-btn{
+   text-decoration: none;
+   font-size: 2rem;
+   /* width: 65px; */
+   /* height: 65px; */
+   padding: 12px 10px;
+   color: rgb(194, 183, 183);
+}
+.apps-btn:hover{
+   color: rgb(73, 65, 65);
+}
 
 
 .app-header>img:hover{
-        transform: scale(1.2);
-        transition: .3s;
-        cursor: pointer;
+   transform: scale(1.2);
+   transition: .3s;
+   cursor: pointer;
 }
   
 .appsus-button {

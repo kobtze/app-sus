@@ -2,13 +2,14 @@ import { emailService } from "../services/service.js";
 import emailPreviow from "../cmps/email-previow.cmp.js";
 export default {
   template: `
-  <section class="email-details text-center"  v-if="email">
-  <pre class="text-center" v-for="line in email.emailContent">
-    {{line}}
-  </pre>
-        <button class='close' @click="close"> Go back </button>
-        </section>
-
+  <main class="all-m email-details" v-if="email">
+   <div class="main-email-m">
+   <h1 class="subject-mail">{{email.subject}}</h1>
+   <p></p>
+   <h3 class="emailContent-text">{{email.emailContent}}</h3>
+   <button class='btn-close' @click="close"> Go back </button>
+   </div>
+       </main>
     `,
 
   data() {
