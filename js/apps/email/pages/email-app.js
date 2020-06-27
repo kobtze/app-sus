@@ -17,8 +17,8 @@ export default {
     <div class="side-container">
         <button class="compose" @click="showMassegeModal">+ Compose</button>
         <button class="inbox-btn">📥 inbox</button>
-        <button class="side-bar-btn">⭐ starred</button>
-        <button class="side-bar-btn">📩 sent mail</button>
+        <button @click="showStar1" class="side-bar-btn">⭐ starred</button>
+        <button @click="showSent1" class="side-bar-btn">📩 sent mail</button>
         <button class="side-bar-btn">➿ Draft</button>
     </div>
     <section class="mail-flow ">
@@ -33,26 +33,42 @@ export default {
           return {
             emails:[],
             filterBy: null,
-            showModal:false
+            showModal:false,
+            showSent:false,
+            showStar:false
             }
         },
         computed: {
           emailsToShow() {
               const filterBy = this.filterBy;
+             if(this.showSent){
+              var filter= this.emails.filter(email=>{
+                return (email.kindOf==='sent')
+              })
+              this.showSent=false
+              return filter
+            }
+            if(this.showStar){
+              var filter2= this.emails.filter(email=>{
+                return (email.kindOf==='star')
+              })
+              this.showStar=false
+              return filter2
+            }
               if (!filterBy) return this.emails;
               var filteredEmails = this.emails.filter((email) => {
                   if ((email.subject.toLowerCase().includes(filterBy.byName.toLowerCase()))||(email.body.toLowerCase().includes(filterBy.byName.toLowerCase()))) return email; 
               });
-              if(filterBy.read){
-                filteredEmails= filteredEmails.map(email=>{
-                  return (email.isRead)
-                }) 
-              }
-              if(filterBy.unRead){
-                filteredEmails= filteredEmails.map(email=>{
-                  return (email.isRead===false)
-                })
-              }
+              // if(filterBy.read){
+              //   filteredEmails= filteredEmails.map(email=>{
+              //     return (email.isRead)
+              //   }) 
+              // }
+              // if(filterBy.unRead){
+              //   filteredEmails= filteredEmails.map(email=>{
+              //     return (email.isRead===false)
+              //   })
+              // }
               return filteredEmails
           },
       },
@@ -65,6 +81,12 @@ export default {
           showMassegeModal(){
            this.showModal=!this.showModal
           },
+          showSent1(){
+            this.showSent=true
+          },
+          showStar1(){
+            this.showStar=true
+          }
       },
   created() {
     console.log("email-app loaded");

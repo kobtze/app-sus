@@ -2,7 +2,7 @@ import { emailService } from "../services/service.js";
 
 export default {
     template: `
-    <section class="comp-container"  v-show="showModal">
+    <form class="comp-container"  v-show="showModal">
       <header class="comp-header">
         <div class="comp-header-text">New Message</div>
       </header>
@@ -10,10 +10,10 @@ export default {
       <input class="subject" type="text" placeholder="  subject" v-model="subject" />
       <textarea class="main-text" v-model="emailContent"></textarea>
       <footer class="comp-footer">
-        <button @click="addNewEmail();showMassegeModal() " class="send">Send</button>
+        <button  @click="addNewEmail();showMassegeModal()" class="send">Send</button>
         <img @click="showMassegeModal" class="delete" src="../email-img/trash.PNG" alt="">
       </footer>
-    </section>
+</form>
     `,
      data(){
       return {

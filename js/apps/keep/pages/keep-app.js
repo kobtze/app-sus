@@ -5,7 +5,10 @@ import noteList from '../cmps/note-list.js';
 export default {
     template: `
         <section class="keep-app">
-            <h2>Keep App</h2>
+        <header class="main-header">
+      <img class="logo" src="./email-img/logo.png" alt=""/>
+    <img class="hedar-button" src="./email-img/header-btn.png" alt=""/>
+    </header>
             <note-create :noteTypes="noteTypes" class="align-center"/>
             <note-list :noteTypes="noteTypes" :notes="notes"/>
         </section>

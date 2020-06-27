@@ -6,9 +6,13 @@ export const emailService = {
     addEmail
 };
 
-
+function makeRandomId(){
+  return Math.random().toString(36).substr(2, 9);
+}
 
 function updateMail(mailId){
+  console.log(mailId);
+  
  gEmails.forEach(mail=>{
    if(mail.id===mailId) mail.isRead=true;
  })
@@ -19,11 +23,11 @@ function createEmail(subject,body,emailContent){
     subject,
     body,
     isRead: false,
+    kindOf:'sent',
     sentAt: '12:14 AM',
     emailContent,
-    id:'15'
-  }
-    
+    id:makeRandomId()
+  } 
 }
 
 function addEmail(subject,body,emailContent){
@@ -40,8 +44,9 @@ function deleteEmail(emailID){
 var gEmails = [
   {
     subject: "Wassap bar?",
-    body: 'Lorem ipsum dolor, sit  adipisicing   impedit, eveniet dignissimos, rerum illo. Quasi aut aliquam numquam reiciendis illum.',
+    body: 'Lorem ipsum dolor, sit  a incidunt voluptates dolores impedit, eveniet ',
     isRead: false,
+    kindOf:'inbox',
     sentAt: '12:14 AM',
     emailContent: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
@@ -60,12 +65,13 @@ var gEmails = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
     ],
-    id:'1'
+    id:makeRandomId()
   },
   {
     subject: "hey how are you?",
-    body: 'Lorem ipsum dolor, sit  a incidunt voluptates dolores impedit, eveniet dignissimos, rerum illo. Quasi aut aliquam numquam reiciendis illum.',
+    body: 'Lorem ipsum dolor, sit  a incidunt voluptates dolores impedit, eveniet ',
     isRead: false,
+    kindOf:'sent',
     sentAt: '1:14 AM',
     emailContent: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
@@ -84,12 +90,13 @@ var gEmails = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
     ],
-    id:'2'
+    id:makeRandomId()
   },
   {
     subject: "good morning",
-    body: 'Lorem ipsum dolor, sits dolores dignissimos, rerum illo. Quasi aut aliquam numquam reiciendis illum.',
+    body: 'Lorem ipsum dolor, sit  a incidunt voluptates dolores impedit, eveniet ',
     isRead: false,
+    kindOf:'inbox',
     sentAt: '3:35 AM',
     emailContent: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
@@ -108,12 +115,13 @@ var gEmails = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
     ],
-    id:'3'
+    id:makeRandomId()
   },
   {
     subject: "tommorow i will be there",
-    body: 'Lorem ipsum dolor, sit  adipies impedit, eveniet dignissimos, rerum illo. Quasi aut aliquam numquam reiciendis illum.',
+    body: 'Lorem ipsum dolor, sit  a incidunt voluptates dolores impedit, eveniet ',
     isRead: false,
+    kindOf:'inbox',
     sentAt: '2:44 AM',
     emailContent: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
@@ -132,12 +140,13 @@ var gEmails = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
     ],
-    id:'4'
+    id:makeRandomId()
   },
   {
     subject: "don`t forget",
-    body: 'Lorem ipsum dolor, sit  adipisicing  a i, eveniet dignissimos, rerum illo. Quasi aut aliquam numquam reiciendis illum.',
+    body: 'Lorem ipsum dolor, sit  a incidunt voluptates dolores impedit, eveniet ',
     isRead: false,
+    kindOf:'star',
     sentAt: '5:14 AM',
     emailContent: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
@@ -156,10 +165,12 @@ var gEmails = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
     ],
-    id:'5'
+    id:makeRandomId()
   },
   {
     subject: "i am so happay",
+    isRead: false,
+    kindOf:'star',
     body: 'Lorem ipsum dolor, sit  adipisicing  a incidunt voluptates dolores',
     sentAt: '7:37 AM',
     emailContent: [
@@ -179,12 +190,13 @@ var gEmails = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
     ],
-    id:'6'
+    id:makeRandomId()
   },
   {
     subject: "tell me",
-    body: 'Lorem ipsum dolor, sittates dolores impedit, eveniet dignissimos, rerum illo. Quasi aut aliquam numquam reiciendis illum.',
+    body: 'Lorem ipsum dolor, sit  a incidunt voluptates dolores impedit, eveniet ',
     isRead: false,
+    kindOf:'inbox',
     sentAt: '2:10 AM',
     emailContent: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
@@ -203,12 +215,13 @@ var gEmails = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
     ],
-    id:'7'
+    id:makeRandomId()
   },
   {
     subject: "do you know",
-    body: 'Lorem ipsum dolor, sit  adniet dignissimos, rerum illo. Quasi aut aliquam numquam reiciendis illum.',
+    body: 'Lorem ipsum dolor, sit  a incidunt voluptates dolores impedit, eveniet ',
     isRead: false,
+    kindOf:'inbox',
     sentAt: '4:14 AM',
     emailContent: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
@@ -227,12 +240,13 @@ var gEmails = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
     ],
-    id:'8'
+    id:makeRandomId()
   },
   {
     subject: "call me please",
-    body: 'Lorem ipsum dolor, sit  adipisicing  a incides impedit, eveniet dignissimos, rerum illo. Quasi aut aliquam numquam reiciendis illum.',
+    body: 'Lorem ipsum dolor, sit  a incidunt voluptates dolores impedit, eveniet ',
     isRead: false,
+    kindOf:'inbox',
     sentAt: '6:55 AM',
     emailContent: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
@@ -251,12 +265,13 @@ var gEmails = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
     ],
-    id:'9'
+    id:makeRandomId()
   },
   {
     subject: "new place",
-    body: 'Lorem ipsum dolor, sit  adipisicing  a incidit, eveniet dignissimos, rerum illo. Quasi aut aliquam numquam reiciendis illum.',
+    body: 'Lorem ipsum dolor, sit  a incidunt voluptates dolores impedit, eveniet ',
     isRead: false,
+    kindOf:'inbox',
     sentAt: '5:23 AM',
     emailContent: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
@@ -275,12 +290,13 @@ var gEmails = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
     ],
-    id:'10'
+    id:makeRandomId()
   },
   {
     subject: "good job",
-    body: 'Lorem ipsum dolor, sit  adipisicintes dolores impedit, eveniet dignissimos, rerum illo. Quasi aut aliquam numquam reiciendis illum.',
+    body: 'Lorem ipsum dolor, sit  a incidunt voluptates dolores impedit, eveniet ',
     isRead: false,
+    kindOf:'inbox',
     sentAt: '3:15 AM',
     emailContent: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
@@ -299,12 +315,13 @@ var gEmails = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
     ],
-    id:'11'
+    id:makeRandomId()
   },
   {
     subject: "good job",
-    body: 'Lorem ipsum dolor, sit  adipisicintes dolores impedit, eveniet dignissimos, rerum illo. Quasi aut aliquam numquam reiciendis illum.',
+    body: 'Lorem ipsum dolor, sit  a incidunt voluptates dolores impedit, eveniet ',
     isRead: false,
+    kindOf:'inbox',
     sentAt: '3:15 AM',
     emailContent: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
@@ -323,12 +340,13 @@ var gEmails = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
     ],
-    id:'12'
+    id:makeRandomId()
   },
   {
     subject: "good job",
-    body: 'Lorem ipsum dolor, sit  adipisicintes dolores impedit, eveniet dignissimos, rerum illo. Quasi aut aliquam numquam reiciendis illum.',
+    body: 'Lorem ipsum dolor, sit  a incidunt voluptates dolores impedit, eveniet ',
     isRead: false,
+    kindOf:'inbox',
     sentAt: '3:15 AM',
     emailContent: [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
@@ -347,7 +365,7 @@ var gEmails = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellendus,',
     ],
-    id:'13'
+    id:makeRandomId()
   },
   
 ];

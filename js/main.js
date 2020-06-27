@@ -6,8 +6,7 @@ new Vue({
     template: `
     <div>
         <header class="flex app-header">
-            <img class="main-apps-btn" @click="showAppsModal" src="../email-img/appsLogo.PNG" alt=""/>
-            <!-- <button class="main-apps-btn" @click="showAppsModal">🔁 </button> -->
+            <img class="main-apps-btn" @click="showAppsModal" src="../email-img/header-btn.PNG" alt=""/>
             <nav class="transfer-Apps flex space-between" v-show="showModal">
                 <router-link class="apps-btn" to="/">🏠</router-link>  
                 <router-link class="apps-btn" to="/email">📧</router-link>  

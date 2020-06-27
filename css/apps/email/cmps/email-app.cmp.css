@@ -145,12 +145,17 @@ transition: .3s;
     border-left: none;
     height: 45px;
   }
+.massage-body{
+  width: 700px;
+}
 
   .massage-left-span{
     margin-left: 20px;
+    width: 180px;
   }
   .massage-right-span{
-    margin-right: 20px;
+    /* margin-right: 20px; */
+    width: 100px;
   }
 
   .span-font{

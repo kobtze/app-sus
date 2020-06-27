@@ -15,6 +15,10 @@
       border: none;
       outline: none;
       font-size: 2rem;
+      position: absolute;
+      right: 2px;
+      top:20px;
+      margin-right: 13px;
   }
 
   .apps-btn{
