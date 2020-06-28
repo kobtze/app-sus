@@ -2,18 +2,18 @@ import { emailService } from "../services/service.js";
 export default {
   props: ["email"],
   template: `
-            <section class="email-massage" @mouseover="showIconsOnMessage" >
-            <button class="no-btn-decoration" v-show="showIcons" @click.stop="deleteEmail" >🗑️</button>
-            <button class="no-btn-decoration" v-show="showIcons" @click.stop="addStar" >{{star}}</button>
-            <span class="massage-left-span span-font">{{email.subject}}</span>
+            <div class="email-massage" @mouseover="showIconsOnMessage" >
+            <i class="fas fa-trash" @click.stop="deleteEmail"></i>
+             <img v-if="showStar" class="star-icon" @click.stop="addStar" src="./email-img/star.svg" alt=""/>
+             <img v-else class="star-icon" @click.stop="addStar" src="./email-img/emptyStar.svg" alt=""/>
+             <span class="massage-left-span span-font">{{email.subject}}</span>
             <span class="massage-body span-font">{{email.body}}</span>
             <span class="massage-right-span span-font">{{email.sentAt}}</span>
-            </section>
+</div>
         `,
         data(){
           return{
-            showIcons:true,
-            star:'⭐'
+            showStar:false,
           }
         },
         
@@ -22,7 +22,7 @@ export default {
       emailService.deleteEmail(this.email.id)
         },
         addStar() {
-          this.star='🌟'
+          this.showStar=!this.showStar
           emailService.addStar(this.email.id)
             },
 

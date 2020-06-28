@@ -11,7 +11,9 @@ export default {
       <textarea class="main-text" v-model="emailContent"></textarea>
       <footer class="comp-footer">
         <button  @click.stop="addNewEmail" class="send">Send</button>
-        <img @click.stop="showMassegeModal" class="delete" src="../email-img/trash.PNG" alt="">
+        <!-- <img @click.stop="showMassegeModal" class="delete" src="../email-img/trash.PNG" alt=""> -->
+       
+        <i class="fas fa-trash fa-2x delete" @click.stop="showMassegeModal"></i>
       </footer>
 </form>
     `,

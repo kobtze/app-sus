@@ -15,18 +15,28 @@
   .main-header {
         display: flex;
         height: 70px;
-        background-color: rgb(255, 169, 10, 0.815);
+        background-color: white;
         justify-content: space-between;
         align-items: center;
+        border-bottom:  0.00001px solid rgba(230, 229, 229, 0.767);
   }
   
   :hover button{
       cursor: pointer;
   }
+
+.appSus{
+   margin-top: 10px;
+
+}
+
   .logo {
-      padding: 10px;
-      font-size: 2rem;
-      font-weight: 400;
+    width: 120px;
+    height: 80px;
+    padding-bottom: 10px;
+       padding-top: 10px;
+      /* font-size: 2rem;
+      font-weight: 400;  */
   }
   /* .massage-body {
     min-width: 50px;
@@ -37,20 +47,43 @@
   .massage-right-span{
     min-width: 300px;
   } */
+  .filter-mail{
+    background-color: rgba(233, 232, 232, 0.726);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .mail-option{
+    background-color: rgba(233, 232, 232, 0.726);
+    border: unset;
+   
+  }
+
+  .logo-title{
+    font-size: 3rem;
+  }
+
   .serch {
-       width: 200px;
+       width: 600px;
        outline: none;
-       height: 30px;
-       background-color: rgba(255, 255, 255, 0.425);
+       height: 50px;
+       background-color:unset;
        border:none;
        margin-right: 10px;
+       border-bottom-left-radius: 10px;
+       border-top-left-radius: 10px;
   }
   .filttered-emails {
+    cursor: pointer;
        text-align: center;
        outline: none;
-       height: 30px;
-       background-color: rgba(255, 255, 255, 0.425);
+       width: 80px;
+       height: 50px;
+       background-color:unset;
        border: none;
+       border-bottom-right-radius: 10px;
+       border-top-right-radius: 10px;
   }
   .hedar-button {
   height: 20px;
@@ -71,7 +104,7 @@
   .main-container {
     display: flex;
     height: 100%;
-    flex-wrap: wrap-reverse;
+    /* flex-wrap: wrap-reverse; */
   }
   
   
@@ -82,11 +115,14 @@
     background-color: white;
     flex-grow: 1;
     min-width: 220px;
+    height: 400px;
+    justify-content: space-between;
   }
   .mail-flow {
     display: grid;
     flex-grow: 5;
     grid-template-rows: repeat(auto-fill, minmax(1fr, 1fr));
+    height: 585px;
   }
   
   .main-footer {
@@ -94,10 +130,17 @@
     background-color:rgba(211, 211, 211, 0.212);
     margin-top: 18px;
   }
+
+  .icon-btn{
+     width: 40px;
+     height: 40px;
+  }
   
  
   .compose{
-    border: none;
+   font-family: lato, Arimo, sans-serif;
+   color:rgb(138, 136, 136);
+   border: none;
    margin-top: 30px;
    border-radius: 30px;
    height: 50px;
@@ -106,38 +149,43 @@
    text-align: center;
    outline: none;
    margin-left: 10px;
-   box-shadow: 4px 2px 8px 1px rgb(153, 151, 151);
-  
-background: rgb(246,248,249); 
+   box-shadow: 1px 1px 8px 1px rgb(189, 187, 187);
+  background-color: white;
+/* background: rgb(246,248,249); 
 background: -moz-linear-gradient(top,  rgba(246,248,249,1) 0%, rgba(229,235,238,1) 50%, rgba(215,222,227,1) 51%, rgba(245,247,249,1) 100%); 
 background: -webkit-linear-gradient(top,  rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); 
 background: linear-gradient(to bottom,  rgba(246,248,249,1) 0%,rgba(229,235,238,1) 50%,rgba(215,222,227,1) 51%,rgba(245,247,249,1) 100%); 
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 ); 
 
-   color: rgb(128, 127, 127);
+   color: rgb(128, 127, 127); */
   }
 
+  .star-icon{
+    width: 17px;
+    height: 17px;
+  }
   
   
   .inbox-btn{
-  font-style: oblique;
+
+  font-family: lato, Arimo, sans-serif;
+  color: #424242;
+  font-size: 0.875rem;
   text-align: left;
   height: 40px;
-  font-weight:bolder;
+  /* font-weight:bolder; */
   margin-top: 30px;
-  outline: none;
-  border: none;
-  background-color: unset;
   }
  
-  .side-container>.inbox-btn:hover  {
-  background-color: rgba(255, 0, 0, 0.11);
+  .side-container>.icon-shadow:hover  {
+  background-color:rgba(211, 211, 211, 0.274);
   border-top-right-radius: 20px 50%;
   border-bottom-right-radius: 20px 50%; 
   transition: 0.1s;
+  cursor: pointer;
   }
 
-  
+  /* background-color: rgba(255, 0, 0, 0.11); */
   
   .all{
     display: flex;
@@ -148,11 +196,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', end
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 0.5px solid rgba(192, 190, 190, 0.767);
-    background-color: rgba(168, 186, 245, 0.438);
+    border: 0.00001px solid rgba(230, 229, 229, 0.767);
+    background-color:white;
     border-right: none;
     border-left: none;
     height: 45px;
+  
   }
 .massage-body{
   width: 700px;
@@ -169,17 +218,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', end
   }
 
   .span-font{
-    font-weight: 600;
+    /* font-weight: 600; */
+    font-family: lato, Arimo, sans-serif;
+    color: #424242;
+    font-size: 0.875rem;
   }
-    .mail-flow section:hover{
+    .mail-flow div:hover{
     cursor: pointer;
-    transform: scale(1.0002);
-    box-shadow: 10px 10px 5px -5px rgba(0,0,0,0.48);
+    transform: scale(1.0006);
+    box-shadow: 20px 10px 5px -5px rgba(197, 197, 197, 0.48);
     transition: .1s;
   }
   
   .DarkGraybackGroundColor{
-    background-color:white;
+   background-color:rgb(245, 243, 243)
   }
 
 .no-btn-decoration{

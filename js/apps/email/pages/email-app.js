@@ -8,17 +8,17 @@ export default {
   template: `
        <main class="all">
        <header class="main-header">
-      <img class="logo" src="./email-img/logo.png" alt=""/>
+  <img class="logo" src="./email-img/horse.svg" alt=""/> <div class="logo-title">𝖆𝖕𝖕𝕾𝖚𝖘</div>
       <email-filter @filter="setFilter"/>
       <span class="hedar-button"></span>
     </header>
     <main class="main-container">
     <div class="side-container">
         <button class="compose" @click.stop="showMassegeModal">+ Compose</button>
-        <button @click.stop="setFolder('inbox')" class="inbox-btn">📥 inbox</button>
-        <button @click.stop="setFolder('starred')" class="inbox-btn">🌟 starred</button>
-        <button @click.stop="setFolder('sent')" class="inbox-btn">📩 sent mail</button>
-        <button class="inbox-btn">➿ Draft</button>
+        <div class="icon-shadow flex margin-left" @click.stop="setFolder('inbox')"><i class="fas fa-inbox icon-btn"></i>Inbox</div>
+        <div class="icon-shadow flex margin-left" @click.stop="setFolder('starred')"><i class="fas fa-star icon-btn"></i>Starred</div>
+        <div class="icon-shadow flex margin-left" @click.stop="setFolder('sent')"><i class="fas fa-paper-plane icon-btn"></i>Sent mail</div>
+        <div class="icon-shadow flex margin-left"><i class="fab fa-firstdraft icon-btn"></i>Draft</div>
     </div>
     <section class="mail-flow ">
     <email-list :emails="emailsToShow"></email-list> 
