@@ -9,7 +9,7 @@ import noteTodo from './notes/note-todo.js';
 export default {
     props: ['note', 'idx', 'noteTypes'],
     template: `
-        <li class="note-preview" @click="selectNote">
+        <li class="masonry-note-item note-preview" @click="selectNote">
         <component  :is="note.type"
                     :note="note" />
         </li>

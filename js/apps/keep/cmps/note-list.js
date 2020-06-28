@@ -7,7 +7,7 @@ export default {
     props: ['notesToShow', 'noteTypes'],
     template: `
     <section>
-    <ul class="flex wrap flex-start note-list">
+    <ul class="masonry note-list">
         <note-full v-if="isModalActive" :note="currNote"/>
         <note-preview   v-for="(note, idx) in notesToShow"
                         :note="note"

@@ -36,13 +36,6 @@ function _createNotes() {
       },
     },
     {
-      type: "noteVid",
-      info: {
-        url:
-          "https://www.youtube.com/watch?v=AYk4VTZIaIM&list=LL4i5XiY9eJuipv4_uMQUxPw&index=17&t=0s",
-      },
-    },
-    {
       type: "noteImg",
       info: {
         url:
@@ -63,6 +56,13 @@ function _createNotes() {
       },
     },
     {
+      type: "noteVid",
+      info: {
+        url:
+          "https://www.youtube.com/watch?v=iOBXuCYB4jQ",
+      },
+    },
+    {
       type: "noteTodo",
       info: {
         list: [{ txt: 'Lip Balm', completed: false }, { txt: 'Toothbrush', completed: false }, { txt: 'Sunscreen', completed: false }, { txt: 'Shampoo', completed: false }, { txt: 'Nail Clippers', completed: false }, { txt: 'Birth Control', completed: false }, { txt: 'Laundry Bag', completed: false }, { txt: 'Shaving Supplies', completed: false }],
@@ -73,13 +73,6 @@ function _createNotes() {
       info: {
         url:
           "https://yesno.wtf/assets/yes/13-c3082a998e7758be8e582276f35d1336.gif",
-      },
-    },
-    {
-      type: "noteVid",
-      info: {
-        url:
-          "https://www.youtube.com/watch?v=iOBXuCYB4jQ",
       },
     },
     {
@@ -107,6 +100,13 @@ function _createNotes() {
       info: {
         url:
           "https://miro.medium.com/max/500/1*E0JKFZnFnxjDeB0H-nS_og.jpeg",
+      },
+    },
+    {
+      type: "noteVid",
+      info: {
+        url:
+          "https://www.youtube.com/watch?v=AYk4VTZIaIM&list=LL4i5XiY9eJuipv4_uMQUxPw&index=17&t=0s",
       },
     },
     {
