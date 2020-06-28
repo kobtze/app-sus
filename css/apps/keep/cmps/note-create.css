@@ -2,7 +2,7 @@
     background-color: #fff;
     padding: 10px 0;
     /* display: inline-block; */
-    width: 600px;
+    width: 580px;
     margin: 2em auto 2em;
     max-width: 100%;
 
@@ -29,4 +29,16 @@
 .k-new-note i:hover,
 .k-new-note i.selected {
 	color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .k-new-note {
+        flex-wrap:  wrap-reverse;
+        justify-content: center;
+        width: 65%;
+        border-radius: 8px;
+    }
+    .k-new-note input {
+        text-align: center;
+    }
 }

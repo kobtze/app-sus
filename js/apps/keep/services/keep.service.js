@@ -46,13 +46,6 @@ function _createNotes() {
       },
     },
     {
-      type: "noteVid",
-      info: {
-        url:
-          "https://www.youtube.com/watch?v=iOBXuCYB4jQ",
-      },
-    },
-    {
       type: "noteTodo",
       info: {
         list: [{ txt: 'Lip Balm', completed: false }, { txt: 'Toothbrush', completed: false }, { txt: 'Sunscreen', completed: false }, { txt: 'Shampoo', completed: false }, { txt: 'Nail Clippers', completed: false }, { txt: 'Birth Control', completed: false }, { txt: 'Laundry Bag', completed: false }, { txt: 'Shaving Supplies', completed: false }],
