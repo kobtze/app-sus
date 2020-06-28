@@ -61,7 +61,6 @@
     padding: 0;
 }
 
-
 .width-all {
     width: 100%;
 }
@@ -79,6 +78,7 @@
     flex-direction: column;
     align-items: center;
 }
+
 .column-layout >*:not(:last-child) {
     margin-bottom: 7.5px;
 }

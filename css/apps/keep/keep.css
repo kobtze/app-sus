@@ -1,5 +1,8 @@
 .keep-app {
-    font-family: lato, Arimo, sans-serif;
     color: #424242;
-    font-size: 0.875rem;
+    direction: ltr;
+    font-family: 'Lato', Arimo, sans-serif;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+
 }
