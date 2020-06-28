@@ -4,8 +4,15 @@ export const emailService = {
     updateMail,
     deleteEmail,
     addEmail,
-    addStar
+    addStar,
+    removeStar
 };
+
+function removeStar(mailId){
+  gEmails.forEach(mail=>{
+    if(mail.id===mailId) mail.isStarred=false;
+  })
+}
 
 function addStar(mailId){
 gEmails.forEach(mail=>{

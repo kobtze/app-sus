@@ -3,8 +3,8 @@ export default {
   props: ["email"],
   template: `
             <div class="email-massage" @mouseover="showIconsOnMessage" >
-            <i class="fas fa-trash" @click.stop="deleteEmail"></i>
-             <img v-if="email.isStarred" class="star-icon" @click.stop="addStar" src="./email-img/star.svg" alt=""/>
+            <i class="trash fas fa-trash" @click.stop="deleteEmail"></i>
+             <img v-if="email.isStarred" class="star-icon" @click.stop="removeStar" src="./email-img/star.svg" alt=""/>
              <img v-else class="star-icon" @click.stop="addStar" src="./email-img/emptyStar.svg" alt=""/>
              <span class="massage-left-span span-font">{{email.subject}}</span>
             <span class="massage-body span-font">{{email.body}}</span>
@@ -19,6 +19,9 @@ export default {
         },
         addStar() {
           emailService.addStar(this.email.id)
+            },
+            removeStar(){
+              emailService.removeStar(this.email.id)
             },
 
         isInbox(emailStatus){

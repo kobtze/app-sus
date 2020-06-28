@@ -64,11 +64,11 @@
     font-size: 3rem;
   }
 
-@media only screen and (max -width: 380px) {
+/* @media only screen and (max -width: 380px) {
   .logo-title{
     font-size: 2rem;
   }
-}
+} */
 
   .serch {
        width: 600px;
@@ -372,7 +372,21 @@ outline: none;
 
 
 /* //////////////////////////////////////////////madia quary: */
-
+@media (max-width: 1200px) {
+  .serch {
+    width: 500px;
+ }
+}
+@media (max-width: 1000px) {
+  .serch {
+    width: 300px;
+ }
+}
+@media (max-width: 800px) {
+  .serch {
+    width: 200px;
+ }
+}
 
 @media (max-width: 740px) {
   .comp-container {
@@ -380,8 +394,8 @@ outline: none;
      height: 300px;
    }
    .serch {
-      width: 150px;
-
+      width:150px;
+    
    }
 
    .compose{
@@ -397,25 +411,48 @@ outline: none;
 
 }
 
-@media (max-width: 400px) {
-  .comp-container {
-     width: 200px;
-     height: 200px;
-   }
-   .serch {
-      width: 100px;
+@media (max-width: 650px) {
+  .serch {
+    width:100px;
+  
+ }
+}
+@media (max-width: 600px) {
+  .serch {
+    width:85px;
+ }
 
-   }
+.filttered-emails{
+ display: none;
 
-   .compose{
-     width: 80px;
-     height: 30px;
-     font-size: 0.6rem;
-   }
+}
 
-   .massage-body{
-    font-size: 0px;
-   width:  50px;
-   }
+}
+@media (max-width: 550px) {
+  .serch {
+    width:170px;
+    height: 40px;
+ }
 
+
+.logo-title{
+  font-size: 2rem;
+}
+
+.logo {
+  width: 90px;
+  height: 60px;
+
+}
+.side-container {
+  min-width: 130px;
+}
+.massage-right-span{
+  display: none;
+}
+
+.star-icon{
+  margin-left: 20px;
+
+}
 }
