@@ -1,10 +1,30 @@
-import {eventBus} from '../services/eventbus-service.js';
+// SERVICES
 import {keepService} from "../services/keep.service.js";
+import {eventBus} from '../services/eventbus-service.js';
+
+// CMPS
+import noteTxt from './note-previews/note-txt.js';
+import noteImg from './note-previews/note-img.js';
+import noteVid from './note-previews/note-video.js';
+import noteAud from './note-previews/note-audio.js';
+import noteTodo from './note-previews/note-todo.js';
+
 
 export default {
     props: ["note"],
+    components: {
+        'noteTxt': noteTxt,
+        'noteImg': noteImg,
+        'noteVid': noteVid,
+        'noteAud': noteAud,
+        'noteTodo': noteTodo,
+    },
     template: `
         <div class="k-note-full">
+            
+            <!-- <component  :is="note.type"
+                        :note="note" /> -->
+            
             <textarea class="k-note-full-text-input" @keyup.enter="save" v-model="noteTxt" />
             <i class="far fa-save" @click="save"></i>
             <i class="far fa-trash-alt" @click="deleteNote"></i>

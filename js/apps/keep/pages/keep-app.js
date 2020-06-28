@@ -1,10 +1,16 @@
-import {keepService} from '../services/keep.service.js';
-import {eventBus} from '../services/eventbus-service.js';
 
+// SERVICES:
+import {keepService} from '../services/keep.service.js';
+
+// CMPS:
 import noteCreate from '../cmps/note-create.js';
-import noteList from '../cmps/note-list.js';
+import notesList from '../cmps/notes-list.js';
 
 export default {
+    components: {
+        notesList,
+        noteCreate
+    },
     template: `
         <section class="keep-app">
         <header class="main-header">
@@ -13,15 +19,12 @@ export default {
     </header>
             <div v-if="editMode" class="k-screen"></div>
             <note-create :noteTypes="noteTypes" class="align-center"/>
-            <note-list :notesToShow="notesToShow" :noteTypes="noteTypes"/>
+            <notes-list :notesToShow="notesToShow" :noteTypes="noteTypes"/>
         </section>
         `,
     data() {
         return {
-            editMode: false,
             notesToShow: [],
-            isActivated: true,
-            currNote: null,
             noteTypes: {
 				noteTxt: { field: 'text', icon: 'fas fa-font', placeholder: 'Take a note...' },
 				noteImg: { field: 'url', icon: 'far fa-image', placeholder: 'Enter image URL...' },
@@ -37,17 +40,5 @@ export default {
                 this.notesToShow = notes;
                 console.log('Notes to show:', notes)
             })
-        eventBus.$on('dimScreen', () => {
-            console.log('screenDimmed');
-            this.editMode = true
-        })
-        eventBus.$on('restoreScreen', () =>{
-            console.log('screenRestored');
-            this.editMode = false
-        })
-    },
-    components: {
-        noteList,
-        noteCreate
     }
 }

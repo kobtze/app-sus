@@ -1,19 +1,18 @@
+@import './fonts.css';
 @import './reset.css';
-@import './helpers.css';
 @import './base.css';
-@import './main-nav-bar.css';
+
+@import './helpers.css';
 @import './masonry.css';
 
-/* BOOKS */
-
-
+/* SHARED */
+@import './home-page.css';
+@import './main-nav-bar.css';
 
 /* EMAIL */
 @import './apps/email/cmps/email-app.cmp.css';
 
-
 /* KEEP */
-
 @import './apps/keep/keep.css';
 @import './apps/keep/cmps/note-create.css';
 @import './apps/keep/cmps/note-list.css';

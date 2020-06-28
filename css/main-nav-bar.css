@@ -1,7 +1,7 @@
-.transfer-Apps{
+.transfer-Apps {
    border-radius: 10px;
-   width: 250px;
-   height: 60px;
+   width: 162px;
+   height: 55px;
    box-shadow: 1px 8px 8px 1px rgb(153, 151, 151);
    position: absolute;
    background-color: white;
@@ -9,6 +9,7 @@
    transition: .3s;
    right: 63px;
    top: 63px;
+<<<<<<< HEAD
    z-index: 4002;
   }
   .main-apps-btn{
@@ -21,21 +22,39 @@
       top:20px;
       margin-right: 13px;
   }
+=======
+   z-index: 4003;
+}
+>>>>>>> 5368799cf0b748d4acd9bea6652d781957281b41
 
-  .apps-btn{
-     text-decoration: none;
-     font-size: 2.2rem;
-     /* width: 65px; */
-     /* height: 65px; */
-     padding: 12px 10px;
-     color: #ffb937;
-  }
+.main-apps-btn {
+   background-color: unset;
+   border: none;
+   outline: none;
+   font-size: 2rem;
+   position: absolute;
+   right: 2px;
+   top:20px;
+   margin-right: 13px;
+}
 
+.apps-btn {
+   text-decoration: none;
+   font-size: 2rem;
+   /* width: 65px; */
+   /* height: 65px; */
+   padding: 12px 10px;
+   color: rgb(194, 183, 183);
+}
 
-.app-header>img:hover{
-        transform: scale(1.2);
-        transition: .3s;
-        cursor: pointer;
+.apps-btn:hover {
+   color: rgb(73, 65, 65);
+}
+
+.app-header>img:hover {
+   transform: scale(1.2);
+   transition: .3s;
+   cursor: pointer;
 }
   
 .appsus-button {
