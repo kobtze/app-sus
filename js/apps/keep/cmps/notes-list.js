@@ -7,7 +7,7 @@ export default {
     props: ['notesToShow', 'noteTypes'],
     template: `
     <section>
-        <note-edit v-if="!!noteToEdit" :note="noteToEdit"/>
+        <note-edit v-if="isEditMode" :note="noteToEdit"/>
 
         <ul class="note-list masonry">
             <note-preview   v-for="(note, idx) in notesToShow"
@@ -19,7 +19,8 @@ export default {
     `,
     data() {
         return {
-            noteToEdit: null
+            isEditMode: false,
+            noteToEdit: null,
         }
     },
     components: {
@@ -28,10 +29,12 @@ export default {
     },
     created() {
         eventBus.$on('noteSelected', idx => {
-            this.noteToEdit = ''+idx;
+            this.isEditMode = true;
+            this.noteToEdit = idx;
         });
         eventBus.$on('closeModal', () => {
-            this.noteToEdit= null;
+            this.isEditMode = false;
+            this.noteToEdit = null;
             eventBus.$emit('restoreScreen');
         })
     }
