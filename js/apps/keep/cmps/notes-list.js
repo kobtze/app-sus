@@ -7,7 +7,7 @@ export default {
     props: ['notesToShow', 'noteTypes'],
     template: `
     <section>
-        <note-edit v-if="noteToEdit" :note="noteToEdit"/>
+        <note-edit v-if="!!noteToEdit" :note="noteToEdit"/>
 
         <ul class="note-list masonry">
             <note-preview   v-for="(note, idx) in notesToShow"
@@ -28,7 +28,7 @@ export default {
     },
     created() {
         eventBus.$on('noteSelected', idx => {
-            this.noteToEdit = idx;
+            this.noteToEdit = ''+idx;
         });
         eventBus.$on('closeModal', () => {
             this.noteToEdit= null;

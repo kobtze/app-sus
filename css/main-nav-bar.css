@@ -12,11 +12,17 @@
    z-index: 4003;
 }
 
+.appsus-button {
+   padding: 20px;
+}
+
 .main-apps-btn {
    background-color: unset;
+   color: #ccc;
    border: none;
    outline: none;
-   font-size: 2rem;
+   /* font-size: 2rem; */
+   font-size: 1.8em;
    position: absolute;
    right: 2px;
    top:20px;
@@ -42,8 +48,5 @@
    cursor: pointer;
 }
   
-.appsus-button {
-   font-size: 1.8em;
-   color: #ccc;
-   padding: 20px;
-}
+
+

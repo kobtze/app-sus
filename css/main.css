@@ -6,6 +6,7 @@
 @import './masonry.css';
 
 /* SHARED */
+@import './base.css';
 @import './home-page.css';
 @import './main-nav-bar.css';
 

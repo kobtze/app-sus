@@ -1,6 +1,6 @@
 .masonry {
 	margin: 0 auto 2em;
-	column-gap: 2em;
+	column-gap: 1rem;
 	column-width: auto;
 }
 
