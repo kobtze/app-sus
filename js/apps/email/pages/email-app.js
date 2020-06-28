@@ -8,7 +8,7 @@ export default {
   template: `
        <main class="all">
        <header class="main-header">
-  <img class="logo" src="./email-img/horse.svg" alt=""/> <div class="logo-title">𝖆𝖕𝖕𝕾𝖚𝖘</div>
+ <div class="flex align-center"> <img class="logo" src="./email-img/horse.svg" alt=""/> <div class="logo-title">𝖆𝖕𝖕𝕾𝖚𝖘</div></div>
       <email-filter @filter="setFilter"/>
       <span class="hedar-button"></span>
     </header>

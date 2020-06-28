@@ -14,7 +14,7 @@ export default {
     template: `
         <section class="keep-app">
         <header class="main-header">
-        <img class="logo" src="./email-img/horse.svg" alt=""/><div class="logo-title">𝖆𝖕𝖕𝕾𝖚𝖘</div>
+        <div class="flex align-center"> <img class="logo" src="./email-img/horse.svg" alt=""/> <div class="logo-title">𝖆𝖕𝖕𝕾𝖚𝖘</div></div>
       <span class="hedar-button"></span>
     </header>
             <div v-if="editMode" class="k-screen"></div>
