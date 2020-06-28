@@ -1,10 +1,10 @@
 import {eventBus} from '../services/eventbus-service.js';
 
-import noteTxt from './notes/note-txt.js';
-import noteImg from './notes/note-img.js';
-import noteVid from './notes/note-video.js';
-import noteAud from './notes/note-audio.js';
-import noteTodo from './notes/note-todo.js';
+import noteTxt from './note-previews/note-txt.js';
+import noteImg from './note-previews/note-img.js';
+import noteVid from './note-previews/note-video.js';
+import noteAud from './note-previews/note-audio.js';
+import noteTodo from './note-previews/note-todo.js';
 
 export default {
     props: ['note', 'idx', 'noteTypes'],

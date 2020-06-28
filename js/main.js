@@ -6,10 +6,9 @@ new Vue({
     router: myRouter,
     template: `
         <div>
-            <div v-if="editMode" class="k-screen"></div>
+            <div v-if="isEditMode" class="k-screen-dimmed" @click="hide"></div>
             <header class="flex app-header">
                 <i class="fas fa-th cursor-pointer main-apps-btn" @click="showAppsModal" ></i>
-                <!-- <img class="main-apps-btn" @click="showAppsModal" src="../email-img/header-btn.PNG" alt=""/> -->
                 <nav class="transfer-Apps flex space-between" v-show="showModal" @click="showAppsModal" >
                     <router-link class="apps-btn" to="/"><i class="fas fa-home"></i></router-link>  
                     <router-link class="apps-btn" to="/email"><i class="far fa-envelope"></i></router-link>  
@@ -24,22 +23,25 @@ new Vue({
     data(){
         return {
           showModal: false,
-          editMode: false,
+          isEditMode: false,
           }
       },
       created() {
         eventBus.$on('dimScreen', () => {
-            console.log('screenDimmed');
-            this.editMode = true
+            // console.log('screenDimmed');
+            this.isEditMode = true
         })
         eventBus.$on('restoreScreen', () => {
-            console.log('screenRestored');
-            this.editMode = false
+            // console.log('screenRestored');
+            this.isEditMode = false
         })
       },
       methods: {
         showAppsModal(){
          this.showModal = !this.showModal
+        },
+        hide() {
+            eventBus.$emit('closeModal')
         },
     },
 })

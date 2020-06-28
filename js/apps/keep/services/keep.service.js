@@ -11,16 +11,6 @@ export const keepService = {
   getNoteTemplate,
 };
 
-"'Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.' ― Albert Einstein"
-
-// 
-// 
-// https://yesno.wtf/assets/yes/0-c44a7789d54cbdcad867fb7845ff03ae.gif
-// 
-// 
-
-
-
 function _createNotes() {
   return [
     {

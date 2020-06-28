@@ -28,17 +28,15 @@
     cursor: pointer;
 }
 
-.k-screen {
-    position: absolute;
+.k-screen-dimmed {
+    position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: #202124;
-    /* background-color: transparent; */
+    opacity: 0.5;
     border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    opacity: 0.5;
-    /* padding: 16px; */
-    position: fixed;
     z-index: 4001;
+    cursor: pointer;
 }
